@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitStar+ - Merci d'avoir utilisé l'extension</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #f59e0b;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 80px;
+            margin-bottom: 24px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--accent), #fcd34d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .card code {
+            background-color: rgba(245, 158, 11, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--accent);
+        }
+
+        .feedback {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .feedback p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .wave {
+            display: inline-block;
+            animation: wave 1.5s infinite;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(20deg);
+            }
+
+            75% {
+                transform: rotate(-20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">⭐</div>
+
+        <h1>GitStar+ a été désinstallé</h1>
+        <p class="subtitle">Merci d'avoir utilisé notre extension !</p>
+
+        <div class="card">
+            <h2>📦 Récupérer vos favoris</h2>
+            <ul>
+                <li>Si vous aviez exporté vos favoris, votre fichier <code>.json</code> contient toutes vos données</li>
+                <li>Réinstallez l'extension et utilisez "Importer" pour restaurer vos favoris</li>
+                <li>Les fichiers exportés sont au format : <code>gitstarplus-favorites-YYYY-MM-DD.json</code></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>💡 Conseil pour le futur</h2>
+            <ul>
+                <li>Exportez régulièrement vos favoris pour avoir une sauvegarde</li>
+                <li>Gardez le fichier JSON dans un endroit sûr (cloud, clé USB, etc.)</li>
+                <li>Une version "Sync" avec GitHub Gist est prévue pour une synchronisation automatique</li>
+            </ul>
+        </div>
+
+        <div class="feedback">
+            <p>Une suggestion ou un problème ? N'hésitez pas à nous le faire savoir !</p>
+            <a href="https://github.com/your-username/gitstarplus/issues" class="btn" target="_blank">
+                📝 Donner mon avis
+            </a>
+        </div>
+
+        <p style="margin-top: 40px; color: var(--text-secondary); font-size: 14px;">
+            À bientôt ! <span class="wave">👋</span>
+        </p>
+    </div>
+</body>
+
+</html>
