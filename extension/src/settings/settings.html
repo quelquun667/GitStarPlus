@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitStar+ - Paramètres</title>
+    <link rel="stylesheet" href="../popup/popup.css">
+    <style>
+        body {
+            width: 380px;
+            min-height: 400px;
+        }
+
+        .settings-container {
+            padding: 0;
+        }
+
+        .setting-group {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .setting-group:last-child {
+            border-bottom: none;
+        }
+
+        .setting-group h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .setting-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .setting-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .setting-select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .setting-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .danger-zone {
+            background-color: rgba(239, 68, 68, 0.05);
+        }
+
+        .danger-zone h3 {
+            color: var(--error-color);
+        }
+
+        .btn-danger {
+            background-color: var(--error-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+
+        .version-info {
+            text-align: center;
+            padding: 12px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+
+        .saved-toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--success-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 13px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .saved-toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="settings-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-title">
+                <span class="logo">⚙️</span>
+                <h1>Paramètres</h1>
+            </div>
+        </header>
+
+        <a href="../popup/popup.html" class="back-link">
+            ← Retour aux favoris
+        </a>
+
+        <!-- Language Setting -->
+        <div class="setting-group">
+            <h3>🌐 Langue / Language</h3>
+            <div class="setting-row">
+                <span class="setting-label" data-i18n="language_label">Langue de l'interface</span>
+                <select class="setting-select" id="language-select">
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Display Settings -->
+        <div class="setting-group">
+            <h3>🎨 Affichage</h3>
+            <div class="setting-row">
+                <span class="setting-label" data-i18n="button_text_label">Texte du bouton</span>
+                <select class="setting-select" id="button-style-select">
+                    <option value="full">GitStar+ (complet)</option>
+                    <option value="short">G+ (court)</option>
+                    <option value="icon">⭐ (icône seule)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Data Management -->
+        <div class="setting-group">
+            <h3>💾 Données</h3>
+            <div class="setting-row">
+                <span class="setting-label" data-i18n="favorites_count">Nombre de favoris</span>
+                <span id="favorites-count">0</span>
+            </div>
+            <div class="setting-row">
+                <span class="setting-label" data-i18n="storage_used">Espace utilisé</span>
+                <span id="storage-used">0 KB</span>
+            </div>
+        </div>
+
+        <!-- Danger Zone -->
+        <div class="setting-group danger-zone">
+            <h3>⚠️ Zone dangereuse</h3>
+            <div class="setting-row">
+                <span class="setting-label" data-i18n="clear_all">Supprimer tous les favoris</span>
+                <button class="btn-danger" id="clear-all-btn" data-i18n="clear_btn">Supprimer tout</button>
+            </div>
+        </div>
+
+        <div class="version-info">
+            GitStar+ v1.0.0
+        </div>
+    </div>
+
+    <div class="saved-toast" id="saved-toast">✓ Paramètres sauvegardés</div>
+
+    <script src="../utils/storage.js"></script>
+    <script src="settings.js"></script>
+</body>
+
+</html>

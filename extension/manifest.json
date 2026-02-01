@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "GitStar+",
+  "version": "1.0.0",
+  "description": "Une deuxième étoile GitHub, personnelle et ultra flexible. Sauvegardez vos favoris indépendamment de l'étoile officielle.",
+  "author": "Noah",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://github.com/*"
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "GitStar+ - Mes favoris GitHub"
+  },
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["src/utils/storage.js", "src/content/content.js"],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.png"],
+      "matches": ["https://github.com/*"]
+    }
+  ]
+}
