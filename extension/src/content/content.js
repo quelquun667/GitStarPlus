@@ -65,7 +65,7 @@
         btn.id = BUTTON_ID;
         btn.type = 'button';
         btn.className = 'btn-sm btn BtnGroup-item';
-        btn.title = isActive ? 'Retirer de GitStar+' : 'Ajouter à GitStar+';
+        btn.title = isActive ? 'Remove from GitStar+' : 'Add to GitStar+';
         btn.setAttribute('aria-label', btn.title);
         btn.style.cssText = isActive
             ? 'background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important; color: white !important; border-color: #b45309 !important;'
@@ -94,7 +94,7 @@
      */
     function updateButtonState(btn, isActive) {
         btn.dataset.active = isActive;
-        btn.title = isActive ? 'Retirer de GitStar+' : 'Ajouter à GitStar+';
+        btn.title = isActive ? 'Remove from GitStar+' : 'Add to GitStar+';
         btn.setAttribute('aria-label', btn.title);
 
         // Update styling
@@ -201,10 +201,10 @@
             updateButtonState(btn, newState);
 
             // Show feedback
-            showToast(newState ? '⭐ Ajouté à GitStar+' : 'Retiré de GitStar+');
+            showToast(newState ? 'Added to GitStar+' : 'Removed from GitStar+');
         } catch (err) {
             console.error('GitStar+ error:', err);
-            showToast('Erreur lors de la mise à jour', true);
+            showToast('Error updating favorite', true);
         } finally {
             btn.disabled = false;
         }

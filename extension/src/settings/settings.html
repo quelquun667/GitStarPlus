@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitStar+ - Paramètres</title>
+    <title>GitStar+ - Settings</title>
     <link rel="stylesheet" href="../popup/popup.css">
     <style>
         body {
@@ -134,58 +134,46 @@
         <header class="header">
             <div class="header-title">
                 <span class="logo">⚙️</span>
-                <h1>Paramètres</h1>
+                <h1>Settings</h1>
             </div>
         </header>
 
         <a href="../popup/popup.html" class="back-link">
-            ← Retour aux favoris
+            ← Back to favorites
         </a>
-
-        <!-- Language Setting -->
-        <div class="setting-group">
-            <h3>🌐 Langue / Language</h3>
-            <div class="setting-row">
-                <span class="setting-label" data-i18n="language_label">Langue de l'interface</span>
-                <select class="setting-select" id="language-select">
-                    <option value="fr">🇫🇷 Français</option>
-                    <option value="en">🇬🇧 English</option>
-                </select>
-            </div>
-        </div>
 
         <!-- Display Settings -->
         <div class="setting-group">
-            <h3>🎨 Affichage</h3>
+            <h3>Display</h3>
             <div class="setting-row">
-                <span class="setting-label" data-i18n="button_text_label">Texte du bouton</span>
+                <span class="setting-label">Button text</span>
                 <select class="setting-select" id="button-style-select">
-                    <option value="full">GitStar+ (complet)</option>
-                    <option value="short">G+ (court)</option>
-                    <option value="icon">⭐ (icône seule)</option>
+                    <option value="full">GitStar+ (full)</option>
+                    <option value="short">G+ (short)</option>
+                    <option value="icon">Icon only</option>
                 </select>
             </div>
         </div>
 
         <!-- Data Management -->
         <div class="setting-group">
-            <h3>💾 Données</h3>
+            <h3>Data</h3>
             <div class="setting-row">
-                <span class="setting-label" data-i18n="favorites_count">Nombre de favoris</span>
+                <span class="setting-label">Favorites count</span>
                 <span id="favorites-count">0</span>
             </div>
             <div class="setting-row">
-                <span class="setting-label" data-i18n="storage_used">Espace utilisé</span>
+                <span class="setting-label">Storage used</span>
                 <span id="storage-used">0 KB</span>
             </div>
         </div>
 
         <!-- Danger Zone -->
         <div class="setting-group danger-zone">
-            <h3>⚠️ Zone dangereuse</h3>
+            <h3>Danger Zone</h3>
             <div class="setting-row">
-                <span class="setting-label" data-i18n="clear_all">Supprimer tous les favoris</span>
-                <button class="btn-danger" id="clear-all-btn" data-i18n="clear_btn">Supprimer tout</button>
+                <span class="setting-label">Delete all favorites</span>
+                <button class="btn-danger" id="clear-all-btn">Delete all</button>
             </div>
         </div>
 
@@ -194,7 +182,7 @@
         </div>
     </div>
 
-    <div class="saved-toast" id="saved-toast">✓ Paramètres sauvegardés</div>
+    <div class="saved-toast" id="saved-toast">Settings saved</div>
 
     <script src="../utils/storage.js"></script>
     <script src="settings.js"></script>
