@@ -69,7 +69,7 @@ function renderFavorites(favorites) {
           <span class="favorite-owner">${escapeHtml(fav.owner)}</span>
         </div>
       </a>
-      <button class="remove-btn" data-id="${escapeHtml(fav.id)}" title="Retirer des favoris">
+      <button class="remove-btn" data-id="${escapeHtml(fav.id)}" title="Remove from favorites">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"/>
         </svg>
@@ -179,10 +179,10 @@ async function handleExport() {
 
         URL.revokeObjectURL(url);
 
-        showNotification('Favoris exportés avec succès!');
+        showNotification('Favorites exported successfully!');
     } catch (err) {
         console.error('Export error:', err);
-        showNotification('Erreur lors de l\'export', true);
+        showNotification('Export failed', true);
     }
 }
 
@@ -200,13 +200,13 @@ async function handleImport(e) {
 
         if (result.success) {
             await loadFavorites();
-            showNotification(`${result.count} favoris importés!`);
+            showNotification(`${result.count} favorites imported!`);
         } else {
             showNotification(result.error, true);
         }
     } catch (err) {
         console.error('Import error:', err);
-        showNotification('Erreur lors de l\'import', true);
+        showNotification('Import failed', true);
     }
 
     // Reset file input

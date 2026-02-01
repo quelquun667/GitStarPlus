@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitStar+ - Mes Favoris</title>
+  <title>GitStar+ - My Favorites</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 
@@ -21,7 +21,7 @@
 
     <!-- Search -->
     <div class="search-container">
-      <input type="text" id="search-input" class="search-input" placeholder="Rechercher un dépôt..." autocomplete="off">
+      <input type="text" id="search-input" class="search-input" placeholder="Search repositories..." autocomplete="off">
     </div>
 
     <!-- Favorites List -->
@@ -32,8 +32,8 @@
     <!-- Empty State -->
     <div class="empty-state" id="empty-state" style="display: none;">
       <span class="empty-icon">⭐</span>
-      <p>Aucun favori pour le moment</p>
-      <small>Cliquez sur le bouton GitStar+ sur une page de dépôt pour commencer</small>
+      <p>No favorites yet</p>
+      <small>Click the GitStar+ button on a repository page to get started</small>
     </div>
 
     <!-- Actions -->
@@ -43,16 +43,16 @@
           <path
             d="M8 0a.75.75 0 01.75.75v6.19l1.72-1.72a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 011.06-1.06l1.72 1.72V.75A.75.75 0 018 0zM2 12a2 2 0 012-2h8a2 2 0 012 2v2a1 1 0 01-1 1H3a1 1 0 01-1-1v-2z" />
         </svg>
-        Importer
+        Import
       </button>
       <button class="btn btn-primary" id="export-btn">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
             d="M8 16a.75.75 0 01-.75-.75V9.06l-1.72 1.72a.75.75 0 11-1.06-1.06l3-3a.75.75 0 011.06 0l3 3a.75.75 0 11-1.06 1.06L8.75 9.06v6.19A.75.75 0 018 16zM2 4a2 2 0 012-2h8a2 2 0 012 2v2a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" />
         </svg>
-        Exporter
+        Export
       </button>
-      <a href="../settings/settings.html" class="btn btn-icon" title="Paramètres">
+      <a href="../settings/settings.html" class="btn btn-icon" title="Settings">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path fill-rule="evenodd"
             d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1.5a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0v-3h-.75a.75.75 0 01-.75-.75zm1.5-3a1 1 0 11-2 0 1 1 0 012 0z" />

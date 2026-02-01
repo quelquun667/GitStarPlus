@@ -1,17 +1,18 @@
 # Changelog
+
 ## [1.0.0] - 2026-02-01
 
-### Ajouté
-- 🌟 Bouton GitStar+ sur les pages de dépôts GitHub
-- 💾 Stockage local des favoris avec `chrome.storage.local`
-- 📤 Export des favoris au format JSON
-- 📥 Import des favoris depuis un fichier JSON
-- 🔍 Recherche dans la liste des favoris
-- 🌙 Support du mode sombre (Dark Mode) GitHub
-- 📄 Page de désinstallation avec instructions de récupération
-- ✨ Toast notifications pour les actions
+### Added
+- GitStar+ button on GitHub repository pages
+- Local favorites storage using chrome.storage.local
+- Export favorites to JSON file
+- Import favorites from JSON file
+- Search functionality in popup
+- Dark mode support (follows GitHub theme)
+- Settings page with language and button style options
+- Toast notifications for actions
 
-### Technique
-- Manifest V3 pour Chrome/Edge
-- Support Firefox via WebExtension API
-- Gestion de la navigation SPA de GitHub (Turbo/pjax)
+### Technical
+- Manifest V3 for Chrome/Edge compatibility
+- Firefox WebExtension API support
+- GitHub SPA navigation handling (Turbo/pjax)

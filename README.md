@@ -1,83 +1,88 @@
-# GitStar+ ⭐
+# GitStar+
 
-> Une deuxième étoile GitHub, personnelle et ultra flexible
+> A second GitHub star, personal and flexible
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Chrome](https://img.shields.io/badge/chrome-MV3-orange)
 ![Firefox](https://img.shields.io/badge/firefox-compatible-red)
 
-Extension navigateur qui ajoute un bouton **GitStar+** sur chaque dépôt GitHub pour gérer vos favoris personnels, indépendamment des étoiles officielles.
+Browser extension that adds a **GitStar+** button on every GitHub repository to manage your personal favorites, independently from the official stars.
 
-## ✨ Fonctionnalités
+## Features
 
-| Fonctionnalité | Description |
-|----------------|-------------|
-| 🌟 **Double étoile** | Bouton GitStar+ sur chaque page de dépôt |
-| 💾 **Stockage local** | Favoris persistants dans le navigateur |
-| 📤 **Export JSON** | Sauvegardez vos favoris en un clic |
-| 📥 **Import JSON** | Restaurez facilement vos données |
-| 🔍 **Recherche** | Trouvez rapidement un favori |
-| 🌙 **Dark Mode** | S'adapte automatiquement au thème GitHub |
+| Feature | Description |
+|---------|-------------|
+| **Second Star** | GitStar+ button on every repository page |
+| **Local Storage** | Favorites persist in the browser |
+| **JSON Export** | Save your favorites with one click |
+| **JSON Import** | Easily restore your data |
+| **Search** | Quickly find a favorite |
+| **Dark Mode** | Automatically adapts to GitHub theme |
 
-## 🚀 Installation
+## Installation
 
 ### Chrome / Edge / Brave
 
-1. Téléchargez ou clonez ce dépôt
-2. Ouvrez `chrome://extensions/` (ou `edge://extensions/`)
-3. Activez le **"Mode développeur"** (en haut à droite)
-4. Cliquez **"Charger l'extension non empaquetée"**
-5. Sélectionnez le dossier **`extension`**
+1. Download or clone this repository
+2. Open `chrome://extensions/` (or `edge://extensions/`)
+3. Enable **Developer mode** (top right)
+4. Click **Load unpacked**
+5. Select the **`extension`** folder
 
 ### Firefox
 
-1. Ouvrez `about:debugging#/runtime/this-firefox`
-2. Cliquez **"Charger un module complémentaire temporaire"**
-3. Sélectionnez le fichier **`extension/manifest.json`**
+1. Open `about:debugging#/runtime/this-firefox`
+2. Click **Load Temporary Add-on**
+3. Select the **`extension/manifest.json`** file
 
-## 📖 Utilisation
+## Usage
 
-### Ajouter un favori
-1. Allez sur n'importe quel dépôt GitHub
-2. Cliquez sur le bouton **GitStar+** (à côté du bouton Star)
-3. L'étoile devient dorée ✓
+### Add a favorite
+1. Go to any GitHub repository
+2. Click the **GitStar+** button (next to the Star button)
+3. The star turns golden
 
-### Gérer vos favoris
-1. Cliquez sur l'icône de l'extension dans la barre d'outils
-2. Recherchez, parcourez ou supprimez vos favoris
-3. Exportez/Importez vos données via les boutons dédiés
+### Manage your favorites
+1. Click the extension icon in the toolbar
+2. Search, browse or remove your favorites
+3. Export/Import your data using the dedicated buttons
 
-## 📁 Structure du projet
+## Project Structure
 
 ```
 GitStar+/
-├── README.md               # Ce fichier
-├── CHANGELOG.md            # Historique des versions
-├── LICENSE                 # Licence MIT
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
 ├── .gitignore
-└── extension/              # ← Dossier à charger dans le navigateur
+└── extension/              <- Load this folder in your browser
     ├── manifest.json
     ├── icons/
     └── src/
-        ├── background/     # Service worker
-        ├── content/        # Script & styles injectés sur GitHub
-        ├── pages/          # Page de désinstallation
-        ├── popup/          # Interface popup
-        └── utils/          # Module de stockage
+        ├── background/
+        ├── content/
+        ├── pages/
+        ├── popup/
+        ├── settings/
+        └── utils/
 ```
 
-## 🔒 Permissions
+## Permissions
 
-| Permission | Raison |
+| Permission | Reason |
 |------------|--------|
-| `storage` | Stocker les favoris localement |
-| `github.com` | Injecter le bouton sur les pages GitHub |
+| `storage` | Store favorites locally |
+| `github.com` | Inject button on GitHub pages |
 
-## 🤝 Contribuer
+## Links
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request.
+- [Changelog](CHANGELOG.md)
 
-## 📄 License
+## Contributing
 
-[MIT](LICENSE) © 2026
+Contributions are welcome! Feel free to open an issue or a pull request.
+
+## License
+
+[MIT](LICENSE) - 2026
