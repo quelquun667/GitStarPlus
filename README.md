@@ -1,20 +1,22 @@
 # GitStar+
 
-> A second GitHub star, personal and flexible
+> A second GitHub star, personal and private
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Chrome](https://img.shields.io/badge/chrome-MV3-orange)
 ![Firefox](https://img.shields.io/badge/firefox-compatible-red)
 
-Browser extension that adds a **GitStar+** button on every GitHub repository to manage your personal favorites, independently from the official stars.
+Browser extension that adds a **GitStar+** button on every GitHub repository to save your **private favorites**.
+
+Unlike GitHub's official stars that are publicly visible on your profile, GitStar+ favorites are stored **locally in your browser** and remain completely private. Perfect for bookmarking repositories you don't want others to see.
 
 ## Features
 
 | Feature | Description |
 |---------|-------------|
-| **Second Star** | GitStar+ button on every repository page |
-| **Local Storage** | Favorites persist in the browser |
+| **Private Favorites** | Your favorites are hidden, not displayed on your profile |
+| **Local Storage** | Favorites stored only in your browser |
 | **JSON Export** | Save your favorites with one click |
 | **JSON Import** | Easily restore your data |
 | **Search** | Quickly find a favorite |
